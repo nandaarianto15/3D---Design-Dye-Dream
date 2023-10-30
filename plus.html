@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+    <html>
+    <head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fancy Product Designer</title>
+
+    <!-- Style sheets -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+    <!-- The CSS for the plugin itself - required -->
+	<link rel="stylesheet" type="text/css" href="css/FancyProductDesigner-all.min.css" />
+
+    <!-- Include js files -->
+	<script src="js/jquery.min.js" type="text/javascript"></script>
+	<script src="js/jquery-ui.min.js" type="text/javascript"></script>
+
+	<!-- HTML5 canvas library - required -->
+	<script src="js/fabric.min.js" type="text/javascript"></script>
+	<!-- The plugin itself - required -->
+    <script src="js/FancyProductDesigner-all.min.js" type="text/javascript"></script>
+    <!-- Include Plus Add-On -->
+    <script src="js/FancyProductDesignerPlus.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+	    jQuery(document).ready(function(){
+
+		    if(typeof FancyProductDesignerPlus === 'undefined') {
+			    alert("For this demo the Fancy Product Designer Plus Add-On is required!");
+			    return false;
+		    }
+
+	    	var $yourDesigner = $('#clothing-designer'),
+	    		pluginOpts = {
+		    		productsJSON: 'json/products.json',
+		    		stageWidth: 1200,
+		    		editorMode: false,
+		    		fonts: [
+				    	{name: 'Helvetica'},
+				    	{name: 'Times New Roman'},
+				    	{name: 'Pacifico', url: 'Enter_URL_To_Pacifico'},
+				    	{name: 'Arial'},
+			    		{name: 'Lobster', url: 'google'}
+			    	],
+		    		customTextParameters: {
+			    		colors: false,
+			    		removable: true,
+			    		resizable: true,
+			    		draggable: true,
+			    		rotatable: true,
+			    		autoCenter: true,
+			    		boundingBox: "Base"
+			    	},
+		    		customImageParameters: {
+			    		draggable: true,
+			    		removable: true,
+			    		resizable: true,
+			    		rotatable: true,
+			    		colors: '#000',
+			    		autoCenter: true,
+			    		boundingBox: "Base"
+			    	},
+			    	actions:  {
+						'top': ['download','print', 'snap', 'preview-lightbox'],
+						'right': ['magnify-glass', 'zoom', 'reset-product', 'qr-code', 'ruler'],
+						'bottom': ['undo','redo'],
+						'left': ['manage-layers','info','save','load']
+					},
+					mainBarModules: ['names-numbers', 'drawing', 'products'],
+					colorSelectionPlacement: 'inside-br',
+					namesNumbersDropdown: ['S', 'M', 'L', 'XL'],
+					namesNumbersEntryPrice: 10,
+					bulkVariationsPlacement: '#my-variations',
+					bulkVariations: {'Size': ['XL', 'L', 'M', 'S'], 'Color': ['Red', 'Blue']}
+	    		},
+	    	yourDesigner = new FancyProductDesigner($yourDesigner, pluginOpts);
+
+	    	//event handler when the price is changing
+			$yourDesigner.on('priceChange', function(evt, price, currentPrice) {
+				$('#thsirt-price').text(currentPrice);
+			});
+
+	    });
+    </script>
+    </head>
+
+    <body>
+    	<div id="main-container">
+          	<h3 id="clothing">Clothing Designer</h3>
+          	<div id="clothing-designer" class="fpd-container fpd-shadow-2 fpd-sidebar fpd-tabs fpd-tabs-side fpd-top-actions-centered fpd-bottom-actions-centered fpd-views-inside-left"></div>
+
+		  	<br /><br />
+		  	<div class="fpd-right">
+			  	<span class="price badge badge-inverse"><span id="thsirt-price"></span> $</span>
+		  	</div>
+		  	<div id="my-variations"></div>
+
+
+    	</div>
+    </body>
+</html>

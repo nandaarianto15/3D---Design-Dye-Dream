@@ -1,0 +1,31 @@
+Product Category One
+    -pada line 7-11, sangat penting karena mengatur lebar tabel dan memberitahu bahwa itu adalah bagian depan 
+     dari gambar. dan jika dihilangkan maka lebar tabel akan tidak beraturan atau secara otomatis mengikuti
+     lebar desktop.
+    -pada line 12-268, merupakan elemen untuk menampilkan dari gambar baju bagian depan, dan jika dihilangkan
+     maka gambar tidak akan muncul dan web akan terus loading, karena elemen merupakan pondasi untuk menampilkan gambar.
+        -pada line 13-55, merupakan untuk menampilkan gambar bayangan yang ada pada images/shirt_turq/Shadow3.png, 
+         jika dihilangkan maka gambar tidak muncul.
+        -pada line 56-100, merupakan untuk menampilkan gambar baju yang ada pada images/shirt_turq/front_turquoise.png
+         dan merupakan gambar dari bagian depan baju, jika dihilangkan maka gambar dari baju tersebut tidak akan muncul.
+        -pada line 101-151, merupakan untuk menampilkan gambar logo design yang ada pada images/shirt_turq/Design1.png
+         dan akan muncul otomatis pada gambar baju yang ingin di design, jika dihilangkan maka gambar logo design tidak 
+         akan muncul secara otomatis pada saat awal membuka lembar product dan menambahkannya secara manual pada 
+         label "design" pada web.
+        -pada line 152-223, merupakan untuk memunculkan teks secara awal pada saat membuka lembar product, jika 
+         dihilangkan maka teks tidak akan muncul secara awal saat membuka lembar product dan harus menambahkannya
+         dan mengeditnya sesuka hati secara manual pada label "text" pada web. 
+        -pada line 224-268, merupakan untuk menampilkan gambar bayangan yang ada pada images/shirt_turq/Shadow4.png, 
+         jika dihilangkan maka gambar tidak muncul.
+    -pada line 269-274, sangat penting karena mengatur lebar tabel dan memberitahu bahwa itu adalah bagian belakang
+     dari gambar. dan jika dihilangkan maka lebar tabel akan tidak beraturan atau secara otomatis mengikuti
+     lebar desktop.
+    -pada line 275-404, merupakan elemen untuk menampilkan dari gambar baju bagian belakang, dan jika dihilangkan
+     maka gambar tidak akan muncul, karena elemen ini seperti pondasi untuk menampilkan gambar tersebut.
+        -pada line 276-318, merupakan untuk menampilkan gambar bayangan yang ada pada images/shirt_turq/shadow2.png,
+         jika dihilangkan maka gambar tidak muncul.
+        -pada line 319-361, merupakan untuk menampilkan gambar baju yang ada pada images/shirt_turq/back_turquoise.png
+         dan merupakan gambar dari bagian belakang baju, jika dihilangkan maka gambar dari baju tersebut tidak akan muncul.
+        -pada line 362-404, merupakan untuk menampilan gambar bayangan yang ada pada images/shirt_turq/over_shadow1.png
+         jika dihilangkan maka gambar tidak muncul.
+         
